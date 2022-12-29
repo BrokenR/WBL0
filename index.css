@@ -865,9 +865,8 @@ header {;
 }
 
 .delivery__place_title span {
-    color: #000000;;
-    width: 100%;
-    max-width: 345px;
+    color: #000000;
+    width: 345px;
     height: 24px;
 
     font-family: Segoe UI, sans-serif;;
@@ -941,13 +940,129 @@ header {;
     width: 100%;
     max-width: 381px;
     height: 52px;
+    position: relative;
 
     /* Background/Smoky */
 
     background: #f6f6fa;
     border-radius: 8px;
 }
+.popup__green{
+    display: none;
+    width: 390px;
+    height: 56px;
+    position: absolute;
+    bottom: -90%;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15), 0px 0px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    right: -3px;
+}
+.popup__green_delivery{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px 14px;
+    gap: 8px;
 
+    position: absolute;
+    width: 288px;
+    height: 56px;
+    left: 230px;
+    top: 30px;
+
+    /* Background/White */
+
+    background: #FFFFFF;
+    /* Тени/Итого, Выпадающие списки */
+
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15), 0px 0px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.cart__itemPrice_popup{
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 11px 16px 13px;
+    gap: 8px;
+
+    position: absolute;
+    width: 239px;
+    height: 64px;
+    left: 0px;
+    top: 19px;
+
+    /* Light/Background/NavBar */
+
+    background: #FFFFFF;
+    /* Тени/Итого, Выпадающие списки */
+
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15), 0px 0px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+.cart__itemPrice_desc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 142px;
+    height: 40px;
+}
+.cart__itemPrice_desc span{
+    width: 71px;
+    height: 16px;
+
+    /* Сайт/Caption */
+
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height, or 123% */
+
+    display: flex;
+    align-items: center;
+
+    /* Light/System/Gray */
+
+    color: #A0A0A4;
+}
+.cart__itemPrice_popupPrice{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 8px;
+
+    width: 57px;
+    height: 40px;
+
+
+}
+.cart__itemPrice_popupPrice span{
+    width: 57px;
+    height: 16px;
+
+    /* Сайт/Caption */
+
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height, or 123% */
+
+    display: flex;
+    align-items: center;
+
+    /* Light/System/Text */
+
+    color: #000000;
+}
 .sum__delivery_callback span {;
     width: 100%;
     max-width: 335px;
@@ -1408,8 +1523,7 @@ p {
 
 
 .delivery__place_title span {;
-    width: 100%;
-    max-width: 345px;
+    width: 345px;
     height: 24px;
     font-family: Segoe UI, sans-serif;
     font-style: normal;
@@ -1477,13 +1591,13 @@ p {
     padding: 0;
     gap: 8px;;
     width: 100%;
-    max-width: 178px;
+    /*max-width: 178px;*/
     height: 16px;
 }
 
 .delivery__place_rateTime span {;
-    width: 100%;
-    max-width: 130px;
+    /*width: 100%;*/
+    /*max-width: 130px;*/
     height: 16px;
 
     /* Сайт/Caption */
@@ -1690,6 +1804,7 @@ p {
     width: 100%;
     max-width: 891px;
     height: 22px;
+    position: relative;
 }
 
 .callback__container {
@@ -1713,6 +1828,7 @@ p {
 
 .callback__info {
     display: flex;
+    position: relative;
     flex-direction: row;
     align-items: baseline;
     padding: 0;
@@ -1724,7 +1840,7 @@ p {
 
 .callback__info span {;
     width: 100%;
-    max-width: 306px;
+    max-width: 311px;
     height: 16px;
 
     /* Сайт/Caption */
@@ -1742,6 +1858,8 @@ p {
 }
 
 .callback__info_green {
+    position: absolute;
+    right: -4px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

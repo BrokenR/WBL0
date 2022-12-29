@@ -9,14 +9,45 @@ let result = document.querySelector(".cart__sum");
 let button = document.querySelector("button");
 let nav = document.querySelector("nav");
 let inputs = document.querySelectorAll("input");
+let svgCheckBox = document.querySelector(".payment__agreement_checkbox").querySelectorAll('svg');
+let unchekedCheckbox = document.querySelector(".checkbox__checked");
+let discounts = document.querySelectorAll('.oldNum')
+let greenDelivery = document.querySelector('#green__delivery_popup');
+let greenCart = document.querySelector('#green__cart_popup');
+let discountPopup = false
+let greenPopup = false
+console.log(discounts)
+discounts.forEach(el=>{
+  el.addEventListener('click', showDiscountPopUp)
+})
 // let mobButton = document.querySelector();
 const mobError = [];
+let checked = false
+function showDiscountPopUp(){
+  discountPopup = true
+  if(discountPopup){
+    this.parentNode.parentNode.querySelector('.cart__itemPrice_popup').style.display = 'flex'
+  }else{
+    this.parentNode.parentNode.querySelector('.cart__itemPrice_popup').style.display = 'none'
+  }
 
+
+}
 // eventListeners
+greenDelivery.addEventListener('click', ()=>{
+  let sp = document.querySelector('.popup__green_delivery');
+  sp.style.display = 'flex'
+  console.log('da',sp)
+})
+greenCart.addEventListener('click', ()=>{
+  let sp = document.querySelector('.popup__green');
+  sp.style.display = 'flex'
+})
 inputs.forEach((item) => item.addEventListener("input", inputHandler));
 inputs.forEach((item) => item.addEventListener("blur", focusValidate));
 button.addEventListener("click", clickValidate);
-
+unchekedCheckbox.addEventListener('click', checkBoxHandler)
+svgCheckBox.forEach(el=>el.addEventListener('click', checkBoxHandler));
 window.addEventListener("resize", WrapMobile);
 
 window.addEventListener("focus", focusValidate);
@@ -34,6 +65,45 @@ if (window.screen.width <= 1024) {
   WrapMobile();
 }
 
+body.addEventListener('click', (e)=>{
+
+  if(e.target.parentNode.nodeName!=='SPAN'){
+    let hideDIscountPopup = document.querySelectorAll('.cart__itemPrice_popup')
+    let greenCart =document.querySelector('.popup__green');
+    hideDIscountPopup.forEach(el=>el.style.display = 'none')
+    greenCart.style.display = 'none'
+
+    greenPopup = false
+  }
+  if(e.target.id!=='green__delivery_popup'){
+    let greenDelivery = document.querySelector('.popup__green_delivery');
+
+    greenDelivery.style.display = 'none'
+  }
+
+
+})
+function popupGreenInfo(){
+  const container = document.createElement("div");
+  const span = document.createElement("span");
+  container.setAttribute("class", "container__popup_green");
+  container.appendChild(span)
+  span.innerText = "Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно"
+}
+
+function checkBoxHandler(event) {
+  checked = !checked
+  if(checked){
+    button.textContent = '1 1016 сом'
+    svgCheckBox[0].style.display = "block"
+    svgCheckBox[1].style.display = "none"
+  }else{
+    button.textContent = 'Заказать'
+    svgCheckBox[0].style.display = "none"
+    svgCheckBox[1].style.display = "block"
+  }
+
+}
 function WrapMobile() {
   if (document.documentElement.clientWidth <= 1024) {
     let mob = document.createElement("div");
