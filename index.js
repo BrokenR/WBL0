@@ -16,6 +16,10 @@ let greenDelivery = document.querySelector('#green__delivery_popup');
 let greenCart = document.querySelector('#green__cart_popup');
 let discountPopup = false
 let greenPopup = false
+let changePayment = document.querySelectorAll('#changePayment');
+let closeModal = document.querySelector('.close');
+changePayment.forEach(el=>el.addEventListener('click',changePaymentHandler))
+console.log(changePayment)
 console.log(discounts)
 discounts.forEach(el=>{
   el.addEventListener('click', showDiscountPopUp)
@@ -33,6 +37,8 @@ function showDiscountPopUp(){
 
 
 }
+closeModal.addEventListener('click', closeChangePayment)
+
 // eventListeners
 greenDelivery.addEventListener('click', ()=>{
   let sp = document.querySelector('.popup__green_delivery');
@@ -83,6 +89,31 @@ body.addEventListener('click', (e)=>{
 
 
 })
+function changePaymentHandler(e) {
+  let modal = document.querySelector('.popupPayment')
+  modal.style.display = 'flex'
+  let cont = document.createElement('div')
+  cont.setAttribute('class', 'blur')
+  cont.style.width = '100vw'
+  cont.style.height = '2045px'
+  cont.style.position='absolute'
+  cont.style.top = '0'
+  cont.style.left = '0'
+
+  modal.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+  })
+  cont.style.backgroundColor = 'rgba(5,0,10,0.3)' ;
+  main.appendChild(cont)
+
+}
+function closeChangePayment(){
+  let modal = document.querySelector('.popupPayment')
+  modal.style.display = 'none'
+  let remove = document.querySelector('.blur')
+  remove.parentNode.removeChild(remove)
+}
 function popupGreenInfo(){
   const container = document.createElement("div");
   const span = document.createElement("span");

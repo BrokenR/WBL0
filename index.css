@@ -979,7 +979,223 @@ header {;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15), 0px 0px 1px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
 }
+.popupPayment{display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+z-index: 5;
+    position: absolute;
+    width: 400px;
+    height: 408px;
+    left: calc(50% - 400px/2);
+    top: calc(50% - 408px/2 - 6.5px);
 
+    /* Background/White */
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;}
+.popupPayment__title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 24px 13px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 57px;
+
+}
+.popupPayment__title span {
+    flex: 1;
+
+    width: 147px;
+    height: 28px;
+
+    /* Сайт/Н3-new */
+
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+
+    /* Text/Black */
+
+    color: #000000;
+}
+.popupPayment__description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 22px 123px;
+    gap: 24px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 267px;
+}
+.popupPayment__description_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 356px;
+    height: 144px;
+}
+.popupPayment__description_containerList{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    width: 356px;
+    height: 144px;
+
+}
+.popupPayment__description_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 356px;
+    height: 24px;
+}
+.popupPayment__description_info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+
+    width: 328px;
+    height: 24px;
+}
+.bank{display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 32px;
+    height: 24px;
+
+    /* Background/Smoky */
+
+    background: #F6F6FA;
+    border-radius: 4px;}
+.bank__con{display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 32px;
+    height: 24px;
+
+    /* Background/Smoky */
+
+    background: #F6F6FA;
+    border-radius: 4px;}
+.nums{display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    width: 139px;
+    height: 24px;}
+.nums span{
+    width: 139px;
+    height: 24px;
+
+    /* Сайт/Body */
+
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+
+    /* Text/Black */
+
+    color: #000000;
+}
+.popupPayment__footer{
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 24px 24px;
+    gap: 10px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 84px;
+
+    /* System/White */
+
+    background: #FFFFFF;
+}
+.popupPayment__footer_container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 312px;
+    height: 44px;
+
+}
+.popupPayment__footer_button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 48px 5px;
+    color: white;
+    width: 164px;
+    height: 44px;
+
+    /* System/Magenta */
+
+    background: #CB11AB;
+    /* Тень в прокрутке */
+
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+.popupPayment__footer_buttonAdd{
+    color: #CB11AB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 5px;
+
+    width: 124px;
+    height: 44px;
+
+    /* Тень в прокрутке */
+
+    filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.08));
+    border-radius: 8px;
+
+}
 .cart__itemPrice_popup{
     display: none;
     flex-direction: row;
